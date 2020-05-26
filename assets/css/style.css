@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Times New Roman";
+  font-size: 16px;
+}
+
+input{
+  height: 30px;
+  width: 70%;
+  margin-left: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  background-color: white;
+  
+}
+
+li {
+  height: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #ff5d88;
+  color: white;
+  font-size: 1.5em;
+  line-height: 1.5;
+  z-index:3;
+}
+
+
+li button {
+  float: right;
+  border: none;
+  height: 40px;
+  cursor: pointer;
+  background-color: #ff9500;
+  color: white;
+  font-size: 1em;
+  z-index:3;
+}
+
+li button:hover {
+  background-color: #febc5d;
+}
+
+.todos {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+#date{
+
+  font-size: 40px;
+  text-align: center;
+  
+}
