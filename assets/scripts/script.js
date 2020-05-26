@@ -42,6 +42,7 @@ function renderTodos() {
   for (var i = 0; i < time.length; i++)
   
   {
+
     var input = document.createElement("input");
     input.setAttribute("type", "text");
     input.id = index;
@@ -75,17 +76,26 @@ function renderTodos() {
     todoList.appendChild(li);
     
     if (hours < 12){
+
       if (index > hours )
+      
       document.getElementById("list" + i).style.background = "green";
+      
       else{
+
       document.getElementById("list" + i).style.background = "red";
+
       }
       
     }
     else{
+
       if (index > hours )
+      
       document.getElementById("list" + i).style.background = "green";
+
       else{
+
       document.getElementById("list" + i).style.background = "red";
       }
 
