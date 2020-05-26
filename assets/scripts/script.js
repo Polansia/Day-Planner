@@ -3,6 +3,7 @@ var todoForm = document.querySelector("#todo-form");
 var todoList = document.querySelector("#todo-list");
 var todoCountSpan = document.querySelector("#todo-count");
 var dateDisplay = document.querySelector("#date");
+var button = document.querySelector("#clear")
 var time = [12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ,11 ,12 ,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,]
 var date = new Date();
 var hours = date.getHours();
@@ -29,7 +30,9 @@ function timer()
 
   
   if (currentDay != day){
-  localStorage.clear(); 
+
+    clear()
+   
   }
 }
 
@@ -65,7 +68,7 @@ function renderTodos() {
 
     var button = document.createElement("button");
     button.textContent = "+";
-    button.id = index;
+    
 
 
     
@@ -130,28 +133,38 @@ todoList.addEventListener("click", function(event)
   if (element.matches("button") === true)
   
   {
-   
-    var todoInput = element.nextElementSibling;
-    var todoId = todoInput.id
-    var task = todoInput.value
+      
+      var todoInput = element.nextElementSibling;
+      var todoId = todoInput.id
+      var task = todoInput.value
     
  
-    if (task === "") {
+      if (task === "") {
       return;
-    }
+     }
 
 
     localStorage.setItem("todo" + todoId, task);
 
     renderTodos();
-    
+  
   }
 });
-function clear(){
+
+button.addEventListener("click", function(event)
+
+{
+
+  clear()
+
+});
 
 
 
+function clear()
+{
 
+localStorage.clear();
 
-
+location.reload();
 }
